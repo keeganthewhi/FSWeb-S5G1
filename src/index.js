@@ -43,3 +43,60 @@ console.log('Proje açıldı!')
 
 
 /* Kodlar Buradan aşağıya */
+
+let navLinks = document.querySelectorAll("nav a");
+
+console.log("navLinks" , navLinks)
+
+const linkText = Object.values(siteContent.nav)
+
+navLinks.forEach((link, index) => {
+  link.className = "italic";
+  link.textContent = siteContent.nav[`nav-item-${index + 1 }`]
+})
+
+let imgLink =  document.getElementById("logo-img")
+imgLink.setAttribute("src", siteContent.images["logo-img"]);
+
+let h1Link = document.querySelector(".cta-text h1")
+h1Link.textContent = "Bu DOM Mükemmel"
+
+let buttonLink = document.querySelector(".cta-text button")
+buttonLink.textContent = "Başlayın"
+
+let img2 = document.getElementById("cta-img")
+img2.setAttribute("src", siteContent.images["cta-img"])
+
+let h4List = document.querySelectorAll(".text-content h4")
+let pList = document.querySelectorAll(".text-content p")
+
+h4List[0].textContent = siteContent["ana-içerik"]["özellikler-h4"]
+pList[0].textContent = siteContent["ana-içerik"]["özellikler-içerik"]
+
+h4List[1].textContent = siteContent["ana-içerik"]["hakkımızda-h4"]
+pList[1].textContent = siteContent["ana-içerik"]["hakkımızda-içerik"]
+
+h4List[2].textContent = siteContent["ana-içerik"]["servisler-h4"]
+pList[2].textContent = siteContent["ana-içerik"]["servisler-içeriği"]
+
+h4List[3].textContent = siteContent["ana-içerik"]["ürünler-h4"]
+pList[3].textContent = siteContent["ana-içerik"]["ürünler-içeriği"]
+
+h4List[4].textContent = siteContent["ana-içerik"]["vizyon-h4"]
+pList[4].textContent = siteContent["ana-içerik"]["vizyon-içeriği"]
+
+let img3 = document.getElementById("middle-img")
+img3.setAttribute("src", siteContent.images["accent-img"])    
+
+let contactH4 = document.querySelector(".contact h4")
+contactH4.textContent = siteContent.iletisim["iletişim-h4"]
+
+let contactPList = document.querySelectorAll(".contact p")
+contactPList[0].textContent = siteContent.iletisim.adres
+contactPList[1].textContent = siteContent.iletisim.telefon
+contactPList[2].textContent = siteContent.iletisim.email
+  
+const footerA = document.querySelector("footer a")
+footerA.textContent = siteContent.footer.copyright
+footerA.classList.add("bold")
+
